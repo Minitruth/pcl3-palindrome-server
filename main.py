@@ -13,7 +13,7 @@ def application(environ, start_response):
     if word is None:
         output = """\
 <h1>Palindrome Checker</h1>
-<form action="test.py" method="get">
+<form action="" method="get">
     <label for="word">What word do you want to check?</label>
     <input name="word" id="word">
     <button>Submit</button>
@@ -22,7 +22,7 @@ def application(environ, start_response):
     else:
         is_palindrome = check_palindrome(word)
         output = """\
-        <p><a href="test.py">&larr; Back</a></p>
+        <p><a href="?">&larr; Back</a></p>
         <h1>Result</h1>
         <!-- TODO -->
         """
