@@ -4,7 +4,11 @@ import cgi
 
 
 def check_palindrome(word):
-    return False  # TODO
+    reverse = word[::-1]
+    if reverse == word:
+        return True
+    else:
+        return False
 
 
 def application(environ, start_response):
@@ -28,6 +32,10 @@ def application(environ, start_response):
         <h1>Result</h1>
         <!-- TODO -->
         """
+        if is_palindrome:
+            output += '{} is a palindrome!'.format(word)
+        else:
+            output += '{} is not a palindrome!'.format(word)
 
     status = "200 OK"
     output = output.encode()
