@@ -30,7 +30,6 @@ def application(environ, start_response):
         output = """\
         <p><a href="?">&larr; Back</a></p>
         <h1>Result</h1>
-        <!-- TODO -->
         """
         if is_palindrome:
             output += '{} is a palindrome!'.format(word)
